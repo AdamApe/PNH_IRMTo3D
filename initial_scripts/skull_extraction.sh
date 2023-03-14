@@ -8,7 +8,7 @@ thr_skull=120
 
 fast -o ${data_path}/sub-Ebdo_ses-01_rec-mean_petra_roi5_bias.nii.gz -l 3 -b -B ${data_path}/sub-Ebdo_ses-01_rec-mean_petra_roi5.nii.gz
 
-fslmaths ${data_path}/sub-Ebdo_ses-01_rec-mean_petra_roi5_bias_restore.nii.gz -thr 125 -bin ${data_path}/sub-Ebdo_ses-01_restore_head_125.nii.gz
+fslmaths ${data_path}/sub-Ebdo_ses-01_rec-mean_petra_roi5_bias_restore.nii.gz -thr ${thr_head} -bin ${data_path}/sub-Ebdo_ses-01_restore_head_125.nii.gz
 
 fslmaths ${data_path}/sub-Ebdo_ses-01_restore_head_125.nii.gz -kernel boxv 5 -dilD ${data_path}/sub-Ebdo_ses-01_restore_head_125_dilD5.nii.gz
 
